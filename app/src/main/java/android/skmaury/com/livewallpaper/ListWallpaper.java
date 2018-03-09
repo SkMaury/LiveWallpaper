@@ -1,5 +1,6 @@
 package android.skmaury.com.livewallpaper;
 
+import android.content.Intent;
 import android.skmaury.com.livewallpaper.Common.Common;
 import android.skmaury.com.livewallpaper.Interface.ItemClickListener;
 import android.skmaury.com.livewallpaper.Model.WallpaperItem;
@@ -95,6 +96,7 @@ public class ListWallpaper extends AppCompatActivity {
                     public void onClick(View view, int position) {
                         /* Code for Detail wallpaper view */
                         Toast.makeText(ListWallpaper.this, "Soon!", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(ListWallpaper.this, ViewWallpaper.class));
                     }
                 });
             }

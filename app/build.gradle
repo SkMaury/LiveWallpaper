@@ -33,7 +33,9 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.0'
     implementation 'com.android.support:cardview-v7:27.1.0'
     implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    implementation 'com.github.d-max:spots-dialog:0.7@aar'
 }
+
 
 
 
