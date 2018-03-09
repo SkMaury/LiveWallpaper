@@ -8,6 +8,7 @@
 
     <com.flaviofaria.kenburnsview.KenBurnsView
         android:src="@drawable/splash_image"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

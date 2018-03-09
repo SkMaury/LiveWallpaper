@@ -1,8 +1,10 @@
 package android.skmaury.com.livewallpaper.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.skmaury.com.livewallpaper.Common.Common;
 import android.skmaury.com.livewallpaper.Interface.ItemClickListener;
+import android.skmaury.com.livewallpaper.ListWallpaper;
 import android.skmaury.com.livewallpaper.Model.CategoryItem;
 import android.skmaury.com.livewallpaper.ViewHolder.CategoryViewHolder;
 import android.support.annotation.NonNull;
@@ -84,7 +86,11 @@ public class CategoryFragment extends Fragment {
                         holder.setItemClickListener(new ItemClickListener() {
                             @Override
                             public void onClick(View view, int position) {
-                                /*Will implement later*/
+                                Common.CATEGORY_ID_SELECTED = adapter.getRef(position).getKey();
+                                Log.v("Category Selected : ", Common.CATEGORY_ID_SELECTED);
+                                Common.CATEGORY_SELECTED = model.getName();
+                                Log.v("Category Model : ", Common.CATEGORY_ID_SELECTED);
+                                startActivity(new Intent(getActivity(), ListWallpaper.class));
                             }
                         });
                     }
@@ -112,7 +118,7 @@ public class CategoryFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_category, container, false);
